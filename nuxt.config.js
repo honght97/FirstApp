@@ -1,3 +1,4 @@
+import { join } from 'path'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -21,6 +22,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -42,5 +44,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-nested': {},
+      },
+  
+  }
   }
 }
